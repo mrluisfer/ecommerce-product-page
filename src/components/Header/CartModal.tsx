@@ -3,7 +3,6 @@ import classes from "./cartModal.module.css";
 import iconDelete from "@/images/icons/icon-delete.svg";
 import productThumbnail from "@/images/image-product-1-thumbnail.jpg";
 import type { ICartItemCtx } from "../context/CartItemsCtx";
-import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 const ProductItem = ({ itemsCounter }: ICartItemCtx) => {
   const { setItemsCounter } = useCartContext();
@@ -44,12 +43,11 @@ const ProductItem = ({ itemsCounter }: ICartItemCtx) => {
 const CartModal = () => {
   const { addItem, itemsCounter, setAddItem, setItemsCounter } =
     useCartContext();
-  const [itemContainerRef] = useAutoAnimate<any>();
 
   return (
     <div className={classes.modalContainer}>
       <h2 className={classes.title}>Cart</h2>
-      <div className={classes.cartItemsContainer} ref={itemContainerRef}>
+      <div className={classes.cartItemsContainer}>
         {addItem && itemsCounter > 0 ? (
           <ProductItem
             itemsCounter={itemsCounter}

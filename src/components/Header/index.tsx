@@ -8,7 +8,6 @@ import CartModal from "./CartModal";
 import DesktopNav from "./DesktopNav";
 import { useCartContext } from "../context/CartItemsCtx";
 import { useState } from "react";
-import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 interface HeaderProps {
   setMobileMenu: Dispatch<SetStateAction<boolean>>;
@@ -18,10 +17,8 @@ export default function Header({ setMobileMenu }: HeaderProps) {
   const [showCartModal, setShowCartModal] = useState(false);
   const { itemsCounter } = useCartContext();
 
-  const [headerRef] = useAutoAnimate<any>();
-
   return (
-    <header className={classes.header} ref={headerRef}>
+    <header className={classes.header}>
       <section className={classes.alignCenter}>
         <div
           className={`${classes.cursorPointer} ${classes.menuIcon} `}
