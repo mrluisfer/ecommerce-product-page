@@ -4,6 +4,7 @@ const path = require("path");
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/ecommerce-product-page/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
