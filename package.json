@@ -8,14 +8,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@formkit/auto-animate": "^1.0.0-beta.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
-    "@types/react": "^17.0.33",
-    "@types/react-dom": "^18.0.4",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.3.7",
     "@vitejs/plugin-react": "^1.0.7",
     "typescript": "^4.5.4",
     "vite": "^6.3.5"
